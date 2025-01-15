@@ -30,6 +30,9 @@ describe("toBe methods testing", () => {
   });
 
   test("should return non falsy value", () => {
+
+    expect.assertions(6);
+
     expect(0).toBeFalsy();
     expect("").toBeFalsy();
     expect(null).toBeFalsy();
@@ -67,12 +70,16 @@ describe("toBe methods testing", () => {
   });
 
   test("should return NaN or not", () => {
+    expect.assertions(2);
+
     expect(NaN).toBeNaN();
 
     expect(1).not.toBeNaN();
   });
 
   test("should return element from flavours", () => {
+    expect.hasAssertions();
+
     expect(getAllFlavors(["lemon"])).toContain("lemon");
   });
 
@@ -86,6 +93,8 @@ describe("toBe methods testing", () => {
   });
 
   test("should return output string", () => {
+    expect.assertions(3);
+
     expect(fetchNewFlavorIdea({ current: "grapefruit" })).toMatch(
       /grapefruit/i
     );
@@ -146,9 +155,7 @@ describe("toBe methods testing", () => {
     });
   });
 
-  afterAll(() => {
-    sum = null;
-  });
+  afterAll(() => {});
 
   afterEach(() => {});
 });

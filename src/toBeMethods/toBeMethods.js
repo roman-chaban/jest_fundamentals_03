@@ -1,4 +1,4 @@
-const sum = 0.1 + 0.2;
+let sum = 0.1 + 0.2;
 
 const fetchNewFlavorIdea = (data) => {
   return data.current;
