@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toBe methods testing should compare objects 1`] = `
+{
+  "bath": true,
+  "bedrooms": 4,
+  "kitchen": {
+    "amenities": [
+      "oven",
+      "stove",
+      "washer",
+    ],
+    "area": 20,
+    "wallColor": StringMatching /white\\|yellow/,
+  },
+}
+`;
+
+exports[`toBe methods testing should return data base error message 1`] = `"This data base is empty"`;
